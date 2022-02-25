@@ -1,0 +1,278 @@
+.creator-container{
+    position: relative;
+    height: auto;
+    background: rgb(255, 255, 255);
+    background-image: url("../img/grouppage-bg.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding-bottom: 50px;
+}
+.creator-con-phone{
+    display: none;
+}
+.creator-con-font{
+    position: relative;
+    top: 60px;
+    margin-bottom: 100px;
+    padding-bottom: 10px;
+}
+.creator-container h1{
+    position: relative;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+}
+.creator-con-font-underline
+{
+    width: 150px;
+    height: 5px;
+    background: rgb(255, 196, 0);
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+}
+
+/* leader information card */
+.leader-con{
+    position: relative;
+    width: 380px;
+    height: 470px;
+    background: rgba(255, 255, 255, 0.664);
+    /* border: 5px rgb(255, 196, 0) solid; */
+    border-radius: 20px;
+    margin: 0 auto;
+}
+.leader-con-img{
+    padding-top: 10px;
+    width: 350px;
+    margin: 0 auto;
+}
+.leader-con img{
+    /* border: 5px #000 solid; */
+    width: 100%;
+    border-radius: 100%;
+}
+.leader-title{
+    padding-bottom: 40px;
+}
+.leader-title h1{
+    padding-top: 30px;
+    color: black;
+}
+.leader-info{
+    position: absolute;
+    background: rgba(0, 0, 0, 0.849);
+    bottom: 0;
+    height: 470px;
+    border-radius: 20px;
+    color: #fff;
+    border: 5px rgb(255, 196, 0) solid;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: all 0.5s ease;
+}
+.leader-info img{
+    border-radius: 20px 20px 0px 0px;
+}
+.leader-info h2, .leader-info p{
+    padding: 0px 10px;
+}
+.leader-info h2{
+    padding-top: 10px;
+}
+.leader-info p{
+    font-size: 1.05rem;
+}
+.leader-con:hover .leader-info{
+    transform: scaleY(1);
+}
+/* 內容hover後延遲出現 */
+.leader-info img, .leader-info h2, .leader-info p{
+    opacity: 0;
+}
+.leader-con:hover .leader-info img{
+    opacity: 1;
+    transition-delay: 0.53s;
+    transition-duration: 0.3s;
+}
+.leader-con:hover .leader-info h2{
+    opacity: 1;
+    transition-delay: 0.53s;
+    transition-duration: 0.3s;
+}
+.leader-con:hover .leader-info p{
+    opacity: 1;
+    transition-delay: 0.53s;
+    transition-duration: 0.3s;
+}
+
+
+/* 組員card */
+.member-container{
+    display: flex;
+    justify-content: space-around;
+}
+.member-con{
+    position: relative;
+    /* width: 300px; */
+    height: 470px;
+    background: rgb(255, 255, 255);
+    /* border: 5px rgb(0, 0, 0) solid; */
+    border-radius: 20px;
+    box-shadow: 1px 1px 6px 1px gray;
+    margin: 0 10px;
+    margin-top: 130px;
+}
+.member-con:hover{
+    transition: 0.5s;
+    box-shadow: 5px 5px 9px 5px;
+}
+.member-con-img{
+    padding-top: 10px;
+    width: 90%;
+    margin: 0 auto;
+}
+.member-con img{
+    /* border: 5px #000 solid; */
+    width: 100%;
+    border-radius: 100%;
+}
+.member-title{
+    padding-bottom: 40px;
+}
+.member-title h1{
+    padding-top: 30px;
+    color: black;
+}
+.member-info{
+    position: absolute;
+    background: rgba(0, 0, 0, 0.849);
+    bottom: 0;
+    height: 470px;
+    border-radius: 20px;
+    color: #fff;
+    border: 5px rgb(255, 196, 0) solid;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: all 0.5s ease;
+}
+.member-info img{
+    border-radius: 20px 20px 0px 0px;
+}
+.member-info h2, .member-info p{
+    padding: 0px 10px;
+}
+.member-info h2{
+    padding-top: 10px;
+}
+.member-info p{
+    font-size: 1.05rem;
+}
+.member-con:hover .member-info{
+    transform: scaleY(1);
+}
+/* 內容hover後延遲出現 */
+.member-info img, .member-info h2, .member-info p{
+    opacity: 0;
+}
+.member-con:hover .member-info img{
+    opacity: 1;
+    transition-delay: 0.53s;
+    transition-duration: 0.3s;
+}
+.member-con:hover .member-info h2{
+    opacity: 1;
+    transition-delay: 0.53s;
+    transition-duration: 0.3s;
+}
+.member-con:hover .member-info p{
+    opacity: 1;
+    transition-delay: 0.53s;
+    transition-duration: 0.3s;
+}
+
+
+
+/* creator container in phone */
+@media (max-width: 992px){
+    .creator-container{
+        display: none;
+    }
+    .creator-con-phone{
+        display: block;
+    }
+    .creator-con-phone{
+        background-image: url("../img/grouppage-bg-ph.jpg");
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .creator-con-phone h1{
+        position: relative;
+        text-align: center;
+        padding: 40px 0;
+        color: #fff;
+        padding-bottom: 3px;
+    }
+    .title-bottom-line{
+        width: 130px;
+        height: 3px;
+        background: rgb(255, 196, 0);
+        margin: 0 auto;
+        border-radius: 3px;
+        margin-bottom: 150px;
+    }
+    .member-con-phone{
+        position: relative;
+        margin: 10px;
+        background: #fff;
+        border-radius: 10px;
+        display: flex;
+        box-shadow: 3px 3px 8px 0.3px;
+        margin-bottom: 30px;
+    }
+    .member-con-phone img{
+        width: 170px;
+        border-radius: 10px 0 0 10px;
+    }
+    .member-inf{
+        margin: 10px 20px;
+    }
+    .member-inf h2{
+        margin-bottom: 4px;
+    }
+    .h2-underline{
+        width: 150px;
+        height: 3px;
+        background: rgb(240, 184, 0);
+        margin-bottom: 8px;
+        border-radius: 5px;
+    }
+    .member-inf p{
+        font-size: 1rem;
+        color: rgb(82, 82, 82);
+    }
+}
+@media (max-width: 762px){
+    h2{
+        font-size: 1.5rem;
+    }
+    .member-inf p{
+        font-size: 0.85rem;
+    }
+    .member-con-phone img{
+        width: 140px;
+    }
+    .h2-underline{
+        width: 120px;
+    }
+}
+@media (max-width: 576px){
+    .creator-con-phone h1{
+        padding-top: 20px;
+    }
+    .title-bottom-line{
+        margin-bottom: 100px;
+    }
+}

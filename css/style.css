@@ -1,0 +1,168 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-size: 14px;
+}
+.header{
+    position: fixed;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    width: 100%;
+    z-index: 1000;
+}
+.header-logo{
+    margin: auto 0;
+    margin-left: 50px;
+}
+.header-logo img{
+    width: 100px;
+}
+.header-list{
+    margin: auto 0;
+    margin-right: 50px;
+}
+.header-list a{
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: all 0.5s ease;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+.header-list a:hover{
+    background-color: rgb(102, 102, 102)
+}
+/*/header in phone*/
+.header-button{
+    display: none;
+    position: relative;
+    margin: auto 0;
+    margin-right: 50px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: 0;
+    background-color: black;
+}
+.header-button-line{
+    position: relative;
+    width: 25px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
+.header-button-line::before, .header-button-line::after{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    top: 8px;
+}
+.header-button-line::before{
+    top: -8px;
+}
+.header-phone-list{
+    position: absolute;
+    left: -230px;
+    background-color: rgb(0, 0, 0);
+    width: 200px;
+    height: 100vh;
+    list-style: none;
+    transition: all 0.3s ease;
+}
+.header-phone-list ul{
+    padding: 0;
+    padding-top: 100px;
+    text-align: center;
+    margin: 0 auto;
+}
+.header-phone-list ul li{
+    padding: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+    list-style: none;
+}
+.header-phone-list ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: bolder;
+}
+/* header in phone */
+@media (max-width : 576px) {
+    .header-logo{
+        margin: auto;
+    }
+    .header-list{
+        display: none;
+    }
+    .header-phone-list.active{
+        left: 0;
+    }
+    .header-button-line.active{
+        transform: rotate(45deg);
+    }
+    .header-button-line.active::before{
+        top: 0;
+    }
+    .header-button-line.active::after{
+        top: 0;
+        transform: rotate(-90deg);
+    }
+    .header-button{
+        display: block;
+        position: absolute;
+        left: 15px;
+        top: 20px;
+    }
+}
+
+/* bootstrap 網格排版 */
+.row{
+    padding-top: 70px;
+}
+.row h1{
+    font-weight: bolder;
+}
+.row p{
+    font-size: 1.2rem;
+}
+.col-md-4{
+    border: 2px solid #000;
+    border-radius: 5px;
+    margin: 0;
+}
+.col-md-4 img{
+    padding: 10px;
+}
+
+/* bootstrap intro section */
+.introsection h1{
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 50px;
+}
+.introsection h3{
+    text-align: center;
+    font-weight: bolder;
+}
+.introsection .col-md-4{
+    border: none;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+.introsection .col-md-4:hover{
+    box-shadow: 5px 5px 10px 1px #000;
+}

@@ -1,0 +1,258 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.header{
+    position: relative;
+    box-shadow: 0px 4px 8px -4px rgb(75, 74, 74);
+    z-index: 1000;
+}
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    position: relative;
+}
+.header-logo{
+    position: relative;
+    width: 90px;
+    margin: auto 0;
+    left: 50px;
+}
+
+/* header-list-container */
+
+.header-list a{
+    text-decoration: none;
+    color: #000;
+    padding: 20px 20px;
+    font-size: 1.4rem;   
+}
+.header-list a:hover{
+    color: rgb(58, 123, 209);
+}
+.header-list li{
+    list-style: none;
+}
+/* brand-list */
+.brand-list-item{
+    display: flex;
+    position: absolute;
+    transform: scaleY(0);
+    background: #fff;
+    left: 0px;
+    width: 100%;
+    top: 72px;
+    box-shadow: 0px 5px 8px -4px rgb(75, 74, 74);
+    text-align: center;
+    transition: all 0.1s ease;
+    transform-origin: top;
+    justify-content: center;
+}
+.brand-list-item ul{
+    margin-bottom: 40px;
+}
+.brand-list-item a{
+    display: block;
+    padding: 0px 20px;
+    margin: 10px 0px;
+}
+.brand-list-item li a{
+    color: rgb(92, 92, 92);
+    font-size: 1.2rem;
+}
+.brand-list:hover .brand-list-item{
+    transform: scaleY(1);
+}
+/* sport-list */
+.sport-list-item{
+    display: flex;
+    position: absolute;
+    transform: scaleY(0);
+    background: #fff;
+    left: 0px;
+    width: 100%;
+    top: 72px;
+    box-shadow: 0px 5px 8px -4px rgb(75, 74, 74);
+    text-align: center;
+    transition: all 0.1s ease;
+    transform-origin: top;
+    justify-content: center;
+}
+.sport-list-item ul{
+    margin-bottom: 40px;
+}
+.sport-list-item a{
+    display: block;
+    padding: 0px 20px;
+    margin: 10px 0px;
+}
+.sport-list-item li a{
+    color: rgb(92, 92, 92);
+    font-size: 1.2rem;
+}
+.sport-list:hover .sport-list-item{
+    transform: scaleY(1);
+}
+
+/* header-phone-list */
+
+.header-button{
+    display: none;
+    background: #fff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin-right: 30px;
+}
+.list-line{
+    width: 35px;
+    height: 3px;
+    background: #000;
+    margin: 0 auto;
+    border-radius: 3px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+.list-line:before, .list-line:after{
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 3px;
+    margin: 0 auto;
+    background: #000;
+    border-radius: 3px;
+}
+.list-line:before{
+    top: -8px;
+    left: 0;
+}
+.list-line:after{
+    top: 8px;
+    left: 0;
+}
+.list-line.active{
+    transform: rotate(45deg);
+}
+.list-line.active:before, .list-line.active:after{
+    top: 0;
+}
+.list-line.active:after{
+    transform: rotate(-90deg);
+}
+
+/* .header-phone-list-container */
+.header-phone-list-container{
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 50%;
+    top: 0;
+    padding-top: 20px;
+    box-shadow: 0px 4px 8px -4px rgb(75, 74, 74);
+    transform: scaleY(0);
+    height: 100vh;
+    left: -400px;
+    transition: all 0.3s ease;
+    z-index: 20000;
+}
+.header-phone-list-container.active{
+    left: 0;
+    /* position: fixed; */
+}
+.header-phone-list-container ul{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+}
+.header-phone-list-container ul li{
+    list-style: none;
+    margin: 20px 0;
+}
+.header-phone-list-container a{
+    text-decoration: none;
+    color: #000;
+    font-size: 1.4rem;
+    padding: 10px 20px;
+}
+
+.header-phone-list-container-bg.active{
+    display: block;
+}
+
+/* btn in header-phone-list */
+.brand-more-btn, .sports-more-btn{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 10%;
+} 
+/* brand and sports list in phone */
+.brand-list-phone{
+    background: rgb(236, 236, 236);
+    display: none;
+    position: relative;
+}
+.brand-list-phone ul{
+    padding: 0;
+    margin: 0;
+    height: auto;
+}
+.brand-list-phone ul li{
+    margin-top: 20px;
+}
+.brand-list-phone ul li a{
+    margin-left: 10%;
+    padding: 0px 20px;
+}
+
+.sports-list-phone{
+    background: rgb(236, 236, 236);
+    display: none;
+}
+.sports-list-phone ul{
+    padding: 0;
+    margin: 0;
+    height: auto;
+}
+.sports-list-phone ul li{
+    margin-top: 20px;
+}
+.sports-list-phone ul li a{
+    margin-left: 10%;
+    padding: 0px 20px;
+}
+
+/* header in phone */
+@media (max-width: 768px){
+    .header-container{
+        padding: 8px 0;
+    }
+    .header-list-container, .header-icon{
+        display: none;
+    }
+    .header-button{
+        display: block;
+    }
+    .header-phone-list-container{
+        transform: scaleY(1);
+    }
+}
+@media (max-width: 992px){
+    .header-list a{
+        font-size: 1.2rem;
+    }
+    .sport-list-item ul h5{
+        font-size: 0.8rem;
+    }
+    .sport-list-item ul li a{
+        font-size: 1rem;
+    }
+}
